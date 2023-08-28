@@ -1,0 +1,72 @@
+.photosslider {
+    width: 30vw;
+    height: 70vh;
+    background-color: #8b8383;
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap
+}
+
+.photosslider > div {
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+}
+
+#pic1 { background-image: url(photos/photo1.jpg);}
+#pic2 { background-image: url(photos/photo2.jpg);}
+#pic3 {background-image: url(photos/photo3.jpg);}
+#pic4 {background-image: url(photos/photo4.jpg);}
+#pic5 {background-image: url(photos/photo5.jpg);}
+#pic6 {background-image: url(photos/photo6.jpg);}
+#pic7 {background-image: url(photos/photo7.jpg);}
+#pic8 {background-image: url(photos/photo8.jpg);}
+#pic9 {background-image: url(photos/photo9.jpg);}
+
+.picslider {
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+    display: flex;
+    animation-duration: 10s;
+    animation:moveleft;
+}
+
+.picslider > div { 
+    height: 70vh;
+    border: solid #000 2px;
+    box-shadow: #fff 2px 3px 5px;
+    min-width: 300px;
+    overflow: hidden;
+}
+
+ .picslider:hover {
+    animation:moveleft;
+    animation-duration: 10s;
+    position: relative;
+}
+
+ @keyframes moveleft { 
+    0% {left: 0px; }
+    12% {left: 100px}
+    24% {left: 200px}
+    36% {left: 300px}
+    48% {left: 400px }
+    60%{left: 500px}
+    73% {left: 600px}
+    85% {left: 800px}
+    100% {left: 1160px}
+} 
+
+svg:hover {
+    transform: scale(1.1);
+}
+
+#arrowleft:hover + picslider {
+    animation: moveLeft 10s;
+
+}

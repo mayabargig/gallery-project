@@ -7,7 +7,7 @@ body {
     width: 100vw;
     height: 100vh;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 10% 120% 120% 10% ;
+    grid-template-rows: 10% 140% 140% 10% ;
     grid-template-areas: 
     "headr headr headr headr"
     "main main main main"
@@ -27,7 +27,7 @@ body {
 .main {
     grid-area: main;
     width: 100vw;
-    height: 400vh;
+    height: 500vh;
     background-color: antiquewhite;
 }
 
@@ -146,16 +146,16 @@ body {
 }
 
 .photosslider {
-    width: 80vw;
+    width: 30vw;
     height: 70vh;
     background-color: #8b8383;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin: 2%;
+    margin: 1%;
     align-items: center;
     justify-content: center;
     justify-content: space-evenly;
+    flex-wrap: nowrap
 }
 
 .photosslider > div {
@@ -164,22 +164,56 @@ body {
     bottom: 0;
 }
 
-#div3 { 
-    width: 25vw;
+#pic1 { background-image: url(photos/photo1.jpg);}
+#pic2 { background-image: url(photos/photo2.jpg);}
+#pic3 {background-image: url(photos/photo3.jpg);}
+#pic4 {background-image: url(photos/photo4.jpg);}
+#pic5 {background-image: url(photos/photo5.jpg);}
+#pic6 {background-image: url(photos/photo6.jpg);}
+#pic7 {background-image: url(photos/photo7.jpg);}
+#pic8 {background-image: url(photos/photo8.jpg);}
+#pic9 {background-image: url(photos/photo9.jpg);}
+
+.picslider {
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 20vw;
+    display: flex;
+    animation-duration: 10s;
+    position: relative;
+    animation:moveleft;
+    transition: transform 0.5s ease-in-out;
+}
+
+.picslider > div { 
     height: 70vh;
     border: solid #000 2px;
     box-shadow: #fff 2px 3px 5px;
-    background-image: url(photos/photo1.jpg);
+    min-width: 300px;
+    /* transition: transform 0.5s ease-in-out; */
 }
 
-svg {
-    width: 10vw;
-    height: 10vh;
-
+ .picslider {
+    animation:moveleft;
+    animation-duration: 10s;
+    position: relative;
 }
+
+ @keyframes moveleft { 
+    0% {left:-1600px }
+    12% {left: -1280px}
+    24% {left: -640px}
+    36% {left: -320px}
+    48% {left: 0px }
+    60%{left: 320px}
+    73% {left: 640px}
+    85% {left: 1280px}
+    100% {left: 1600px}
+} 
 
 svg:hover {
-    transform: scale(1.2px);
+    transform: scale(1.1);
 }
 
 .footr {
